@@ -15,6 +15,7 @@ services:
       - "32000:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MAX_ALLOWED_PACKET: "67108864"
     volumes:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./data:/var/lib/mysql
