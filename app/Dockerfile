@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the model files into the container at /app
 COPY /tokenizer.pkl /app
 COPY /sentiment_analysis_model.h5 /app
+COPY /templates/ /app/
 
 # Copy the application code into the container at /app
 COPY app.py /app
